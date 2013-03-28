@@ -1,6 +1,11 @@
 {
     "name": "cypresslab/gitelephant_hub",
     "description": "An easy to use git repository browser",
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    },
     "require": {
         "symfony/process": "2.2.*",
         "symfony/filesystem": "2.2.*",
