@@ -1,8 +1,2 @@
-<?php
-/**
- * User: matteo
- * Date: 28/03/13
- * Time: 18.51
- * Just for fun...
- */
-
+<h1>GitElephant Hub</h1>
+<h2>Git Repositories</h2>
