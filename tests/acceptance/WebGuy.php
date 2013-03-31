@@ -23,7 +23,7 @@ use Codeception\Module\WebHelper;
 
 class WebGuy extends \Codeception\AbstractGuy
 {
-    
+
     /**
      * Submits a form located on page.
      * Specify the form by it's css or xpath selector.

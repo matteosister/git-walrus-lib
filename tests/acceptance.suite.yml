@@ -15,4 +15,4 @@ modules:
         - WebHelper
     config:
         PhpBrowser:
-            url: 'http://gitelephant_hub.local/'
+            url: 'http://localhost:8000'
