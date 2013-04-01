@@ -51,6 +51,11 @@ class GitWalrus
         $this->kernel = new HttpKernel($dispatcher, $resolver);
     }
 
+    public function handleRequest(Request $request)
+    {
+        return $this->getKernel()->handle($request);
+    }
+
     /**
      * Get Kernel
      *
