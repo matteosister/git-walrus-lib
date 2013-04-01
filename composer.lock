@@ -1236,23 +1236,23 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "0.7.2",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
-                "url": "git://github.com/padraic/mockery.git",
-                "reference": "0.7.2"
+                "url": "https://github.com/padraic/mockery.git",
+                "reference": "0.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/padraic/mockery/zipball/0.7.2",
-                "reference": "0.7.2",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/0.8.0",
+                "reference": "0.8.0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
-            "suggest": {
-                "Hamcrest": "1.0.0"
+            "require-dev": {
+                "hamcrest/hamcrest": "1.1.0"
             },
             "type": "library",
             "autoload": {
@@ -1262,7 +1262,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "New BSD"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -1285,20 +1285,20 @@
                 "test double",
                 "testing"
             ],
-            "time": "2012-01-24 12:22:39"
+            "time": "2013-04-01 12:13:17"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Seldaek/monolog",
-                "reference": "1.4.0"
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "1.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.4.0",
-                "reference": "1.4.0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.4.1",
+                "reference": "1.4.1",
                 "shasum": ""
             },
             "require": {
@@ -1347,7 +1347,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-02-13 18:06:51"
+            "time": "2013-04-01 10:04:58"
         },
         {
             "name": "phpunit/php-code-coverage",
