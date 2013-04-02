@@ -11,6 +11,14 @@ SITE
     yum (2.2.0)
 
 GIT
+  remote: git://github.com/firebelly/chef-nginx_conf.git
+  ref: master
+  sha: 325f84606bc1fd904c4d8a48400fba136bb72a20
+  specs:
+    nginx_conf (0.0.5)
+      nginx (>= 0.0.0)
+
+GIT
   remote: git://github.com/opscode-cookbooks/mysql.git
   ref: master
   sha: 78bc8d25d3553e0cb164bac63e692e4ed5770d4f
@@ -78,6 +86,7 @@ DEPENDENCIES
   git (>= 0)
   mysql (>= 0)
   nginx (>= 0)
+  nginx_conf (>= 0)
   php (>= 0)
   php-fpm (>= 0)
 
