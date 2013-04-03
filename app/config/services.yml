@@ -1,0 +1,4 @@
+services:
+    router:
+        class: GitWalrus\Routing\Router
+        arguments: [ %kernel.root_dir% ]

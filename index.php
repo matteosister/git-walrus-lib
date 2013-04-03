@@ -1,12 +1,13 @@
 <?php
 
 require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/app/GitWalrusKernel.php';
 
-use GitWalrus\GitWalrus;
+use GitWalrus\GitWalrusKernel;
 use Symfony\Component\HttpFoundation\Request;
 
-$gw = new GitWalrus(__DIR__);
+$gw = new GitWalrusKernel('dev', true);
 $request = Request::createFromGlobals();
-$response = $gw->handleRequest($request);
+$response = $gw->handle($request);
 $response->send();
-$gw->getKernel()->terminate($request, $response);
+$gw->terminate($request, $response);

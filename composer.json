@@ -17,7 +17,8 @@
         "symfony/dependency-injection": "2.2.*",
         "cypresslab/gitelephant": "0.9.*",
         "symfony/console": "2.2.*",
-        "twig/twig": "1.12.*"
+        "twig/twig": "1.12.*",
+        "symfony/class-loader": "2.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",

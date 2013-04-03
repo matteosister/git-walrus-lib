@@ -9,12 +9,10 @@
 
 namespace GitWalrus\Routing;
 
-use GitWalrus\GitWalrus;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
-use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 
 class Router
@@ -24,11 +22,11 @@ class Router
      */
     private $routes;
 
-    public function __construct(GitWalrus $gitWalrus)
+    public function __construct($kernelRootDir)
     {
-        $locator = new FileLocator(array($gitWalrus->getConfigPath()));
+        $locator = new FileLocator(array($kernelRootDir.'/config'));
         $loader = new YamlFileLoader($locator);
-        $this->routes = $loader->load('routes.yml');
+        $this->routes = $loader->load('routing.yml');
     }
 
     /**
