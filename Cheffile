@@ -11,8 +11,8 @@ cookbook 'mysql',
   :git => 'git://github.com/opscode-cookbooks/mysql.git'
 cookbook 'nginx',
   :git => 'git://github.com/opscode-cookbooks/nginx.git'
-cookbook 'nginx_conf',
-  :git => 'git://github.com/firebelly/chef-nginx_conf.git'
+#cookbook 'nginx_conf',
+#  :git => 'git://github.com/firebelly/chef-nginx_conf.git'
 cookbook 'php',
   :git => 'git://github.com/opscode-cookbooks/php.git'
 cookbook 'php-fpm',
