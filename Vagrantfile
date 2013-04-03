@@ -16,8 +16,8 @@ Vagrant::Config.run do |config|
         chef.add_recipe "php-fpm"
         chef.add_recipe "composer"
         chef.add_recipe "git"
-        chef.add_recipe "git-walrus"
         chef.add_recipe "nginx"
+        chef.add_recipe "git-walrus"
         chef.json = {
             app: {
                 name: "git-walrus",
