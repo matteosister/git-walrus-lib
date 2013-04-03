@@ -10,6 +10,7 @@
 namespace GitWalrus;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
@@ -46,7 +47,8 @@ class GitWalrusKernel extends Kernel
     public function registerBundles()
     {
         return array(
-            new FrameworkBundle()
+            new FrameworkBundle(),
+            new TwigBundle()
         );
     }
 
@@ -59,6 +61,6 @@ class GitWalrusKernel extends Kernel
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/services.yml');
+        $loader->load(__DIR__.'/config/config.yml');
     }
 }

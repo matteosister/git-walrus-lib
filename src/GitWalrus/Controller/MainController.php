@@ -10,12 +10,14 @@
 namespace GitWalrus\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class MainController
+class MainController extends Controller
 {
     public function homepageAction()
     {
+        return $this->render('homepage.html.twig');
         return new Response('<h1>GitWalrus Hub</h1><h2>git-walrus repository</h2>');
     }
 }

@@ -6,6 +6,7 @@ Vagrant::Config.run do |config|
     config.vm.box = "quantal64"
     config.vm.box_url = "https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box"
     config.vm.network :hostonly, "33.33.33.33"
+    config.vm.share_folder "main", "/vagrant", ".", :nfs => true
     #config.vm.customize ["modifyvm", :id, "--memory", 512]
     config.vm.provision :chef_solo do |chef|
         chef.cookbooks_path = ["cookbooks", "vagrant"]
@@ -24,6 +25,7 @@ Vagrant::Config.run do |config|
                 dev: false
             },
             nginx: {
+                user: 'vagrant',
                 default_site_enabled: false
             }
         }
