@@ -7,8 +7,8 @@ cookbook 'apt',
   :git => 'https://github.com/fnichol/chef-apt'
 cookbook 'git',
   :git => 'https://github.com/fnichol/chef-git.git'
-cookbook 'mysql',
-  :git => 'git://github.com/opscode-cookbooks/mysql.git'
+#cookbook 'mysql',
+#  :git => 'git://github.com/opscode-cookbooks/mysql.git'
 cookbook 'nginx',
   :git => 'git://github.com/opscode-cookbooks/nginx.git'
 #cookbook 'nginx_conf',
