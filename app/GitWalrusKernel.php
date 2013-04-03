@@ -9,6 +9,7 @@
 
 namespace GitWalrus;
 
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
@@ -44,7 +45,9 @@ class GitWalrusKernel extends Kernel
      */
     public function registerBundles()
     {
-        return array();
+        return array(
+            new FrameworkBundle()
+        );
     }
 
     /**

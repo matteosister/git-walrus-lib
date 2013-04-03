@@ -1,4 +1,12 @@
-services:
+parameters:
+  kernel.secret: git-walrus
+  controller_resolver.class: GitWalrus\Resolver\ControllerResolver
+
+framework:
     router:
-        class: GitWalrus\Routing\Router
-        arguments: [ %kernel.root_dir% ]
+        resource: "%kernel.root_dir%/config/routing.yml"
+
+#services:
+#  routing:
+#    class: GitWalrus\Routing\Router
+#    arguments: [ %kernel.root_dir% ]
