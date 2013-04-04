@@ -25,18 +25,6 @@ use Symfony\Component\Routing\Matcher\UrlMatcher;
  */
 class GitWalrusKernel extends Kernel
 {
-
-//    public function __construct($basePath)
-//    {
-//        $this->basePath = $basePath;
-//        $this->router = new Router($this);
-//        $matcher = new UrlMatcher($this->router->getRoutes(), new RequestContext());
-//        $dispatcher = new EventDispatcher();
-//        $dispatcher->addSubscriber(new RouterListener($matcher));
-//        $resolver = new ControllerResolver();
-//        $this->kernel = new HttpKernel($dispatcher, $resolver);
-//    }
-
     /**
      * Returns an array of bundles to registers.
      *
@@ -61,6 +49,6 @@ class GitWalrusKernel extends Kernel
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config.yml');
+        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
 }

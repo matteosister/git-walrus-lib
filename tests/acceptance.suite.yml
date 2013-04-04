@@ -15,4 +15,4 @@ modules:
         - WebHelper
     config:
         PhpBrowser:
-            url: 'http://33.33.33.33'
+            url: 'http://33.33.33.33/index_test.php'

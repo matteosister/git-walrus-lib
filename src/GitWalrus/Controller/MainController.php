@@ -17,7 +17,8 @@ class MainController extends Controller
 {
     public function homepageAction()
     {
-        return $this->render('homepage.html.twig');
-        return new Response('<h1>GitWalrus Hub</h1><h2>git-walrus repository</h2>');
+        return $this->render('homepage.html.twig', array(
+            'repo' => $this->get('repo')
+        ));
     }
 }

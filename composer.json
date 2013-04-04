@@ -21,7 +21,8 @@
         "symfony/class-loader": "2.2.*",
         "symfony/framework-bundle": "2.2.*",
         "symfony/twig-bundle": "2.2.*",
-        "symfony/form": "2.2.*"
+        "symfony/form": "2.2.*",
+        "kriswallsmith/assetic": "@stable"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",

@@ -1,3 +1,7 @@
 homepage:
-  path:     /
+  path: /
   defaults: { _controller: 'MainController::homepageAction' }
+
+css:
+  path: /all.css
+  defaults: { _controller: 'AssetController::cssAction' }

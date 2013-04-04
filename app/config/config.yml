@@ -5,6 +5,7 @@ parameters:
   secret: git-walrus
   controller_resolver.class: GitWalrus\Resolver\ControllerResolver
   locale: en
+  repository_root: %kernel.root_dir%/../
 
 framework:
   #esi:             ~

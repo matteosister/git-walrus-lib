@@ -1,2 +1,14 @@
-<h1>GitWalrus Hub</h1>
-<h2>git-walrus repository</h2>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Git Walrus</h1>
+    <div class="row-fluid">
+        <table class="table table-condensed table-striped tree">
+            {% for row in repo.tree %}
+            <tr>
+                <td>{{ row }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -66,16 +66,21 @@
                     <div id="sf-resetcontent" class="sf-reset">
                 <h1>Whoops, looks like something went wrong.</h1>
                                         <div class="block_exception clear_fix">
-                            <h2><span>1/1</span> <abbr title="RuntimeException">RuntimeException</abbr>: Unable to write in the cache directory (/vagrant/app/cache/dev)<br />
-</h2>
+                            <h2><span>1/1</span> <abbr title="InvalidArgumentException">InvalidArgumentException</abbr>: the path "/vagrant/app/../tests/repo-test" is not a repository folder</h2>
                         </div>
                         <div class="block">
                             <ol class="traces list_exception">
-       <li> in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php line 634</li>
-       <li>at <abbr title="Symfony\Component\HttpKernel\Kernel">Kernel</abbr>->buildContainer() in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php line 556</li>
-       <li>at <abbr title="Symfony\Component\HttpKernel\Kernel">Kernel</abbr>->initializeContainer() in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php line 139</li>
-       <li>at <abbr title="Symfony\Component\HttpKernel\Kernel">Kernel</abbr>->boot() in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php line 194</li>
-       <li>at <abbr title="Symfony\Component\HttpKernel\Kernel">Kernel</abbr>->handle(<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>)) in /vagrant/index.php line 11</li>
+       <li> in /vagrant/vendor/cypresslab/gitelephant/src/GitElephant/Repository.php line 85</li>
+       <li>at <abbr title="GitElephant\Repository">Repository</abbr>->__construct('/vagrant/app/../tests/repo-test') in /vagrant/app/cache/test/appTestDebugProjectContainer.php line 361</li>
+       <li>at <abbr title="appTestDebugProjectContainer">appTestDebugProjectContainer</abbr>->getRepoService() in /vagrant/vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection/Container.php line 262</li>
+       <li>at <abbr title="Symfony\Component\DependencyInjection\Container">Container</abbr>->get('repo') in /vagrant/vendor/symfony/framework-bundle/Symfony/Bundle/FrameworkBundle/Controller/Controller.php line 252</li>
+       <li>at <abbr title="Symfony\Bundle\FrameworkBundle\Controller\Controller">Controller</abbr>->get('repo') in /vagrant/src/GitWalrus/Controller/MainController.php line 21</li>
+       <li>at <abbr title="GitWalrus\Controller\MainController">MainController</abbr>->homepageAction()</li>
+       <li>at <abbr title=""></abbr>call_user_func_array(<em>array</em>(<em>object</em>(<abbr title="GitWalrus\Controller\MainController">MainController</abbr>), 'homepageAction'), <em>array</em>()) in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpKernel.php line 129</li>
+       <li>at <abbr title="Symfony\Component\HttpKernel\HttpKernel">HttpKernel</abbr>->handleRaw(<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>), '1') in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpKernel.php line 73</li>
+       <li>at <abbr title="Symfony\Component\HttpKernel\HttpKernel">HttpKernel</abbr>->handle(<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>), '1', <em>true</em>) in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/ContainerAwareHttpKernel.php line 57</li>
+       <li>at <abbr title="Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel">ContainerAwareHttpKernel</abbr>->handle(<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>), '1', <em>true</em>) in /vagrant/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php line 197</li>
+       <li>at <abbr title="Symfony\Component\HttpKernel\Kernel">Kernel</abbr>->handle(<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>)) in /vagrant/index_test.php line 11</li>
     </ol>
 </div>
 

@@ -6,6 +6,8 @@
 use Codeception\Maybe;
 use Codeception\Module\PhpBrowser;
 use Codeception\Module\WebHelper;
+use GitElephant\Repository;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Inherited methods
@@ -23,7 +25,31 @@ use Codeception\Module\WebHelper;
 
 class WebGuy extends \Codeception\AbstractGuy
 {
+    private $repositoryPath;
 
+    public function haveAGitRepository($path = null)
+    {
+        $this->repositoryPath = $path ? $path : __DIR__.'/../repo-test';
+        $dir = $this->repositoryPath;
+        $f = new Filesystem();
+        if ($f->exists($dir)) {
+            $this->deleteTheGitRepository();
+        }
+        $f->mkdir($dir);
+        $r = new Repository($dir);
+        $r->init();
+        $f->touch($dir.'/file1');
+        $f->touch($dir.'/file2');
+        $f->mkdir($dir.'/dir1');
+        $f->touch($dir.'/dir1/file3');
+        $r->commit('first commit', true);
+    }
+
+    private function deleteTheGitRepository()
+    {
+        $fs = new Filesystem();
+        $fs->remove($this->repositoryPath);
+    }
     /**
      * Submits a form located on page.
      * Specify the form by it's css or xpath selector.

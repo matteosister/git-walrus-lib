@@ -1,5 +1,5 @@
 {
-    "hash": "aa8c26c7c6d75b5b8aa19892eeb6df9b",
+    "hash": "a1edef1b130315b5006a682593fe6a92",
     "packages": [
         {
             "name": "cypresslab/gitelephant",
@@ -116,6 +116,49 @@
                 "spl"
             ],
             "time": "2012-09-19 22:55:18"
+        },
+        {
+            "name": "kriswallsmith/assetic",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/kriswallsmith/assetic.git",
+                "reference": "v1.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kriswallsmith/assetic/zipball/v1.0.4",
+                "reference": "v1.0.4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Assetic": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Asset Management for PHP",
+            "homepage": "https://github.com/kriswallsmith/assetic",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ],
+            "time": "2012-08-28 05:18:28"
         },
         {
             "name": "psr/log",
@@ -2681,6 +2724,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "kriswallsmith/assetic": 0,
         "codeception/codeception": 0
     },
     "platform": [

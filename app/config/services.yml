@@ -1,1 +1,5 @@
-services: ~
+services:
+  repo:
+    class: GitElephant\Repository
+    arguments:
+      - %repository_root%
