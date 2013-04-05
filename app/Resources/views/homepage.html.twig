@@ -6,7 +6,7 @@
         <table class="table table-condensed table-striped tree">
             {% for row in repo.tree %}
             <tr>
-                <td>{{ row }}</td>
+                <td><a href="{{ path('tree_object', { path: row.fullPath, ref: repo.mainBranch.name }) }}">{{ row }}</a></td>
             </tr>
             {% endfor %}
         </table>
