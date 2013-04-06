@@ -1,8 +1,7 @@
-/lib/vendor/
-/lib/tests/_log/*
-/lib/.vagrant/
-/lib/tmp/
-/lib/cookbooks/
-/lib/app/cache/*
-/lib/app/logs/*
-/build/git-walrus.phar
+/vendor/
+/tests/_log/*
+/.vagrant/
+/tmp/
+/cookbooks/
+/app/cache/*
+/app/logs/*
