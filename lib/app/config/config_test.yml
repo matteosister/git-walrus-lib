@@ -1,5 +1,2 @@
 imports:
   - { resource: config.yml }
-
-parameters:
-  repository_root: /test_repository
