@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
-require_once __DIR__.'/app/GitWalrusKernel.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../app/GitWalrusKernel.php';
 
 use GitWalrus\GitWalrusKernel;
 use Symfony\Component\HttpFoundation\Request;
