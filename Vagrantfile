@@ -9,7 +9,7 @@ Vagrant::Config.run do |config|
     config.vm.share_folder "main", "/vagrant", ".", :nfs => true
     #config.vm.customize ["modifyvm", :id, "--memory", 512]
     config.vm.provision :chef_solo do |chef|
-        chef.cookbooks_path = ["cookbooks", "vagrant"]
+        chef.cookbooks_path = ["cookbooks", "tests/vagrant"]
         chef.add_recipe "apt"
         chef.add_recipe "build-essential"
         chef.add_recipe "php"
