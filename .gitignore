@@ -5,3 +5,4 @@
 /lib/cookbooks/
 /lib/app/cache/*
 /lib/app/logs/*
+/build/git-walrus.phar
