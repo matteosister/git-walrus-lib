@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Git Walrus</h1>
+    <div class="row-fluid">
+        <table class="table table-condensed table-striped tree">
+            {% for row in repo.tree %}
+            <tr>
+                <td><a href="{{ path('tree_object', { path: row.fullPath, ref: repo.mainBranch.name }) }}">{{ row }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

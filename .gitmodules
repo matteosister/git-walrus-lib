@@ -1,3 +1,0 @@
-[submodule "vagrant/mdxp"]
-	path = vagrant/mdxp
-	url = git://github.com/mdxp/cookbooks.git
