@@ -1,5 +1,5 @@
 {
-    "hash": "a1edef1b130315b5006a682593fe6a92",
+    "hash": "b0478497d8989d508a9f4fb7bd28accf",
     "packages": [
         {
             "name": "cypresslab/gitelephant",
@@ -1325,17 +1325,42 @@
             "time": "2013-03-23 07:49:54"
         },
         {
-            "name": "twig/twig",
-            "version": "v1.12.2",
+            "name": "thomaspark/bootswatch",
+            "version": "dev-gh-pages",
             "source": {
                 "type": "git",
-                "url": "git://github.com/fabpot/Twig.git",
-                "reference": "v1.12.2"
+                "url": "https://github.com/thomaspark/bootswatch.git",
+                "reference": "9eba534b14b32499b8ae391d76fdb64c6f4e96b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.12.2",
-                "reference": "v1.12.2",
+                "url": "https://api.github.com/repos/thomaspark/bootswatch/zipball/9eba534b14b32499b8ae391d76fdb64c6f4e96b9",
+                "reference": "9eba534b14b32499b8ae391d76fdb64c6f4e96b9",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "thomaspark",
+                    "email": "hello@thomaspark.me"
+                }
+            ],
+            "description": "Themes for Twitter Bootstrap",
+            "time": "2013-04-07 01:35:56"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.12.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "v1.12.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.12.3",
+                "reference": "v1.12.3",
                 "shasum": ""
             },
             "require": {
@@ -1371,71 +1396,10 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-02-09 18:21:53"
+            "time": "2013-04-08 12:40:11"
         }
     ],
     "packages-dev": [
-        {
-            "name": "Codeception/Codeception",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "1.6.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/1.6.0",
-                "reference": "1.6.0",
-                "shasum": ""
-            },
-            "require": {
-                "behat/mink": "1.4.*",
-                "behat/mink-goutte-driver": "*",
-                "behat/mink-selenium-driver": "*",
-                "behat/mink-selenium2-driver": "*",
-                "behat/mink-zombie-driver": "*",
-                "fabpot/goutte": "*",
-                "monolog/monolog": "*",
-                "php": ">=5.3.3",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/console": "*",
-                "symfony/event-dispatcher": "*",
-                "symfony/finder": "*",
-                "symfony/yaml": "*",
-                "videlalvaro/php-amqplib": "*"
-            },
-            "bin": [
-                "codecept"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Codeception": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Bodnarchuk",
-                    "email": "davert@mail.ua",
-                    "homepage": "http://codegyre.com"
-                }
-            ],
-            "description": "BDD-style testing framework",
-            "homepage": "http://codeception.com/",
-            "keywords": [
-                "BDD",
-                "TDD",
-                "acceptance testing",
-                "functional testing",
-                "unit testing"
-            ],
-            "time": "2013-04-05 22:52:55"
-        },
         {
             "name": "alexandresalome/php-selenium",
             "version": "1.0.1",
@@ -1808,6 +1772,67 @@
             "time": "2013-03-08 10:04:51"
         },
         {
+            "name": "codeception/codeception",
+            "version": "1.6.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeception/Codeception.git",
+                "reference": "1.6.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/1.6.0.3",
+                "reference": "1.6.0.3",
+                "shasum": ""
+            },
+            "require": {
+                "behat/mink": "1.4.*",
+                "behat/mink-goutte-driver": "*",
+                "behat/mink-selenium-driver": "*",
+                "behat/mink-selenium2-driver": "*",
+                "behat/mink-zombie-driver": "*",
+                "fabpot/goutte": "*",
+                "monolog/monolog": "*",
+                "php": ">=5.3.3",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/console": "*",
+                "symfony/event-dispatcher": "*",
+                "symfony/finder": "*",
+                "symfony/yaml": "*",
+                "videlalvaro/php-amqplib": "*"
+            },
+            "bin": [
+                "codecept"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Codeception": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Bodnarchuk",
+                    "email": "davert@mail.ua",
+                    "homepage": "http://codegyre.com"
+                }
+            ],
+            "description": "BDD-style testing framework",
+            "homepage": "http://codeception.com/",
+            "keywords": [
+                "BDD",
+                "TDD",
+                "acceptance testing",
+                "functional testing",
+                "unit testing"
+            ],
+            "time": "2013-04-12 06:47:01"
+        },
+        {
             "name": "fabpot/goutte",
             "version": "v1.0.1",
             "source": {
@@ -2120,6 +2145,61 @@
                 "psr-3"
             ],
             "time": "2013-04-01 10:04:58"
+        },
+        {
+            "name": "pdepend/pdepend",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/pdepend/pdepend.git",
+                "reference": "1.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/pdepend/pdepend/zipball/1.1.0",
+                "reference": "1.1.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.3"
+            },
+            "bin": [
+                "src/bin/pdepend"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Official version of pdepend to be handled with Composer",
+            "time": "2012-09-12 04:09:19"
+        },
+        {
+            "name": "phpmd/phpmd",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/phpmd/phpmd.git",
+                "reference": "1.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/phpmd/phpmd/archive/1.4.1.zip",
+                "reference": "1.4.1",
+                "shasum": ""
+            },
+            "require": {
+                "pdepend/pdepend": "*",
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "src/bin/phpmd"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "../../pdepend/pdepend/src/main/php",
+                "src/main/php"
+            ],
+            "description": "Official version of PHPMD handled with Composer.",
+            "time": "2012-12-14 12:25:09"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2725,6 +2805,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "kriswallsmith/assetic": 0,
+        "thomaspark/bootswatch": 20,
         "codeception/codeception": 0
     },
     "platform": [

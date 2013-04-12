@@ -1,5 +1,8 @@
 {% extends "base.html.twig" %}
 
+{% set menu_selected = 'files' %}
+
+
 {% block body %}
     {#<div class="row-fluid">
         {% include "CypressGitElephantHostBundle:Repository:tabs.html.twig" with {
@@ -10,7 +13,7 @@
         {{ render(controller('CypressGitElephantHostBundle:Repository:breadcrumb', {slug: repository.slug, ref: ref, path: path})) }}
     </div>#}
     <div class="repository row-fluid" data-slug="" data-ref="{{ ref }}">
-        {{ render(controller('MainController::treeAction', {ref: ref, path: path})) }}
+        {{ render(controller('RepositoryController::treeAction', {ref: ref, path: path})) }}
     </div>
 {% endblock %}
 

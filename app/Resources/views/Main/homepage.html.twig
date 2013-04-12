@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% set menu_selected = 'homepage' %}
+
 {% block body %}
-    <h1>Git Walrus</h1>
+    {#<h1>Git Walrus</h1>
     <div class="row-fluid">
         <table class="table table-condensed table-striped tree">
             {% for row in repo.tree %}
@@ -10,5 +12,7 @@
             </tr>
             {% endfor %}
         </table>
-    </div>
+    </div>#}
+    <h3>status</h3>
+    {{ repo.status|join('<br />')|raw }}
 {% endblock %}

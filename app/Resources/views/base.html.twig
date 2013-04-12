@@ -6,6 +6,9 @@
     </head>
     <body>
         <div class="container-fluid">
+            {% block menu %}
+                {% include "Slices/navbar.html.twig" %}
+            {% endblock %}
             {% block body %}{% endblock %}
         </div>
     </body>

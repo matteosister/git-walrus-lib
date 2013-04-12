@@ -1,0 +1,10 @@
+{% set menu_selected = menu_selected is defined ? menu_selected : '' %}
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="{{ path('homepage') }}">{{ title }}</a>
+        <ul class="nav">
+            <li class="{{ menu_selected == 'homepage' ? 'active' : '' }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+            <li class="{{ menu_selected == 'files' ? 'active' : '' }}"><a href="{{ path('repository_root') }}">Files</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 imports:
   - { resource: services.yml }
+  - { resource: parameters.yml }
 
 parameters:
   secret: git-walrus

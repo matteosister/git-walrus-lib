@@ -10,6 +10,7 @@ namespace GitWalrus\Controller;
 
 use Assetic\Asset\AssetCollection;
 use Assetic\Asset\FileAsset;
+use Assetic\Filter\Sass\ScssFilter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,10 +22,18 @@ class AssetController extends Controller
         $rootDir = $this->container->getParameter('kernel.root_dir');
         $response = new Response();
         $response->headers->set('Content-Type', 'text/css');
-        $css = new AssetCollection(array(
-            new FileAsset($rootDir.'/assets/css/bootstrap/css/bootstrap.min.css'),
-            new FileAsset($rootDir.'/assets/css/bootstrap/css/bootstrap-responsive.min.css')
-        ));
+        $css = new AssetCollection();
+        if ($this->container->getParameter('theme')) {
+            $css->add(
+                new FileAsset(sprintf($rootDir.'/../vendor/thomaspark/bootswatch/%s/bootstrap.css', $this->container->getParameter('theme')))
+            );
+        } else {
+            $css->add(
+                new FileAsset(sprintf($rootDir.'/assets/css/bootstrap/css/bootstrap.min.css', $this->container->getParameter('theme')))
+            );
+        }
+        $css->add(new FileAsset($rootDir.'/assets/css/bootstrap/css/bootstrap-responsive.min.css'));
+        $css->add(new FileAsset($rootDir.'/assets/css/git-walrus/main.css'));
         $response->setContent($css->dump());
 
         return $response;

@@ -1,0 +1,3 @@
+parameters:
+  title: Git Walrus Lib Repository
+  theme: ~ #cerulean # check http://bootswatch.com/ for all the themes

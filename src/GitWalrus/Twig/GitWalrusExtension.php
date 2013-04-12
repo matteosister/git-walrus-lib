@@ -29,6 +29,13 @@ class GitWalrusExtension extends \Twig_Extension
         $this->container = $container;
     }
 
+    public function getGlobals()
+    {
+        return array(
+            'title' => $this->container->getParameter('title')
+        );
+    }
+
     /**
      * twig filters
      *

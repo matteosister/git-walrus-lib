@@ -1,14 +1,20 @@
 tree_object:
   path: /tree/{ref}/{path}
-  defaults: { _controller: 'MainController::treeObjectAction', ref: 'master' }
+  defaults: { _controller: 'RepositoryController::treeObjectAction', ref: 'master' }
   requirements:
     ref: "\S+"
     path: ".+"
 
-homepage:
-  path: /
-  defaults: { _controller: 'MainController::homepageAction' }
+repository_root:
+  path: /tree/{ref}
+  defaults: { _controller: 'RepositoryController::rootAction', ref: 'master' }
+  requirements:
+    ref: "\S+"
 
 css:
   path: /all.css
   defaults: { _controller: 'AssetController::cssAction' }
+
+homepage:
+  path: /
+  defaults: { _controller: 'MainController::homepageAction' }
