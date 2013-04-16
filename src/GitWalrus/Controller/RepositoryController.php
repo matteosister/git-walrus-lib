@@ -54,9 +54,6 @@ class RepositoryController extends Controller
     public function treeAction($ref, $path)
     {
         $git = $this->getRepo();
-        $parts = $this->getRefPathSplitter()->split($ref, $path);
-        $ref = $parts[0];
-        $path = $parts[1];
         $tree = $git->getTree($ref, $path);
         try {
             $readme = $git->getTree('master', 'README.md')->getBinaryData();
