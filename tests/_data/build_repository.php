@@ -6,13 +6,14 @@
  * Just for fun...
  */
 
-include __DIR__.'/../../vendor/autoload.php';
+require_once __DIR__.'/../../vendor/autoload.php';
 
 use Symfony\Component\Filesystem\Filesystem;
 use GitElephant\Repository;
 
-$dir = '/test_repository';
+$dir = sys_get_temp_dir().DIRECTORY_SEPARATOR.sha1(uniqid());
 $f = new Filesystem();
+$f->mkdir($dir);
 $r = new Repository($dir);
 $r->init();
 $f->touch($dir.'/file1');

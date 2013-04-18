@@ -15,4 +15,4 @@ modules:
         - WebHelper
     config:
         PhpBrowser:
-            url: 'http://33.33.33.33/index_test.php'
+            url: 'http://gitwalrus.local/index_test.php'
