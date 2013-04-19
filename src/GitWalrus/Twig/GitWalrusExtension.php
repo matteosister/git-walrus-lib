@@ -83,6 +83,51 @@ class GitWalrusExtension extends \Twig_Extension
     }
 
     /**
+     * link to the parent
+     *
+     * @return mixed
+     */
+    public function linkParent()
+    {
+        return $this->container->get('cypress.git_elephant_host.git_router')->parentUrl();
+    }
+
+    /**
+     * output a tree object content
+     *
+     * @param \GitElephant\Objects\TreeObject $treeObject tree object
+     * @param string                          $ref        reference
+     *
+     * @return mixed
+     */
+    public function outputContent(TreeObject $treeObject, $ref)
+    {
+        try {
+            $output = $this->container->get('templating')->render('Twig/output_content.html.twig', array(
+                'output' => $this->container->get('cypress.git_elephant_host.git_content')->outputContent($treeObject, $ref)
+            ));
+        } catch (\Exception $e) {
+            $output = $this->container->get('templating')->render('Twig/output_content.html.twig', array(
+                'link' => '(TODO) link to the file'
+            ));
+        }
+
+        return $output;
+    }
+
+    /**
+     * output a line
+     *
+     * @param \GitElephant\Objects\Diff\DiffChunk $diffChunk diff chunk
+     *
+     * @return mixed
+     */
+    public function outputChunk(DiffChunk $diffChunk)
+    {
+        return $this->container->get('cypress.git_elephant_host.git_content')->outputChunk($diffChunk);
+    }
+
+    /**
      * is an image
      *
      * @param \GitElephant\Objects\Tree $tree tree

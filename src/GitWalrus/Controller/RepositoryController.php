@@ -19,7 +19,7 @@ class RepositoryController extends Controller
         return $this->render('Repository/repository.html.twig', array(
             'repo' => $this->getRepo(),
             'ref' => $ref,
-            'path' => ''
+            'path' => null
         ));
     }
 

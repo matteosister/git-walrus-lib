@@ -50,7 +50,8 @@ class RefPathSplitter
         for ($i = 0; $i < count($parts) - 1; $i++) {
             $newRef = ltrim($newRef.'/'.$parts[$i], '/');
             if (null !== $this->repository->getBranchOrTag($newRef)) {
-                $newPath = '' === $path ? ltrim(str_replace($newRef, '', $ref), '/') : $path;
+                $refPath = trim(str_replace($newRef, '', $ref), '\/');
+                $newPath = $refPath.'/'.$path;
 
                 return array($newRef, $newPath);
             }

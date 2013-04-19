@@ -11,6 +11,7 @@
     <div class="bc">
         {{ render(controller('CypressGitElephantHostBundle:Repository:breadcrumb', {slug: repository.slug, ref: ref, path: path})) }}
     </div>#}
+
     <div class="repository row-fluid" data-ref="{{ ref }}">
         {{ render(controller('RepositoryController::treeAction', {ref: ref, path: path})) }}
     </div>
