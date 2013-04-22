@@ -8,6 +8,7 @@
 
 namespace GitWalrus\Twig;
 
+use GitElephant\Objects\Diff\DiffChunk;
 use GitElephant\Objects\Tree;
 use GitElephant\Objects\TreeObject;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -89,7 +90,7 @@ class GitWalrusExtension extends \Twig_Extension
      */
     public function linkParent()
     {
-        return $this->container->get('cypress.git_elephant_host.git_router')->parentUrl();
+        return $this->container->get('git_router')->parentUrl();
     }
 
     /**
@@ -104,7 +105,7 @@ class GitWalrusExtension extends \Twig_Extension
     {
         try {
             $output = $this->container->get('templating')->render('Twig/output_content.html.twig', array(
-                'output' => $this->container->get('cypress.git_elephant_host.git_content')->outputContent($treeObject, $ref)
+                'output' => $this->container->get('git_content')->outputContent($treeObject, $ref)
             ));
         } catch (\Exception $e) {
             $output = $this->container->get('templating')->render('Twig/output_content.html.twig', array(
@@ -124,7 +125,7 @@ class GitWalrusExtension extends \Twig_Extension
      */
     public function outputChunk(DiffChunk $diffChunk)
     {
-        return $this->container->get('cypress.git_elephant_host.git_content')->outputChunk($diffChunk);
+        return $this->container->get('git_content')->outputChunk($diffChunk);
     }
 
     /**

@@ -10,6 +10,8 @@ namespace GitWalrus\Controller;
 
 use Assetic\Asset\AssetCollection;
 use Assetic\Asset\FileAsset;
+use Assetic\Asset\GlobAsset;
+use Assetic\Asset\StringAsset;
 use Assetic\Filter\Sass\ScssFilter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,6 +36,7 @@ class AssetController extends Controller
         }
         $css->add(new FileAsset($rootDir.'/assets/css/bootstrap/css/bootstrap-responsive.min.css'));
         $css->add(new FileAsset($rootDir.'/assets/css/git-walrus/main.css'));
+        $css->add(new StringAsset($this->get('pygmentize')->generateCss()));
         $response->setContent($css->dump());
 
         return $response;

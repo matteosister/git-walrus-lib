@@ -9,22 +9,25 @@
 
 namespace GitWalrus\Git;
 
-use Cypress\GitElephantHostBundle\Git\Base\GitBaseService;
-use Symfony\Bridge\Monolog\Logger;
+use Cypress\PygmentsElephantBundle\PygmentsElephant\Pygmentize;
+use GitElephant\Repository;
 use Symfony\Component\HttpFoundation\Request;
 use GitElephant\Objects\TreeObject;
-use PygmentsElephant\Pygmentize;
-use Doctrine\Common\Persistence\ObjectManager;
 use GitElephant\Objects\Diff\DiffChunk;
 
 /**
  * Git Content
  */
-class Content extends GitBaseService
+class Content
 {
     const JPG = '\xFF\xD8\xFF';
     const GIF  = 'GIF';
     const PNG  = '\x89\x50\x4e\x47\x0d\x0a\x1a\x0a';
+
+    /**
+     * @var Repository
+     */
+    private $repository;
 
     /**
      * @var Pygmentize
@@ -34,20 +37,19 @@ class Content extends GitBaseService
     /**
      * Class constructor
      *
-     * @param Request                        $request       request
-     * @param Pygmentize                     $pygmentize    pygmentize
+     * @param \GitElephant\Repository $repository repository
+     * @param Pygmentize              $pygmentize pygmentize
      */
-    public function __construct(Request $request, Pygmentize $pygmentize)
+    public function __construct(Repository $repository, Pygmentize $pygmentize)
     {
-        $this->request = $request;
-        $this->objectManager = $objectManager;
+        $this->repository = $repository;
         $this->pygmentize = $pygmentize;
-        $this->logger = $logger;
     }
 
     /**
      * output git Treeobject content
      *
+     * @param \GitElephant\Repository         $repository repository
      * @param \GitElephant\Objects\TreeObject $treeObject tree object
      * @param string                          $ref        reference
      *
@@ -55,8 +57,7 @@ class Content extends GitBaseService
      */
     public function outputContent(TreeObject $treeObject, $ref = 'HEAD')
     {
-        $output = $this->pygmentize->format($this->getGit()->outputRawContent($treeObject, $ref), $treeObject->getName());
-        $this->logger->info($output);
+        $output = $this->pygmentize->format($this->repository->outputRawContent($treeObject, $ref), $treeObject->getName());
         $matches = array();
         preg_match("'<div class=\"highlight\"><pre>(.*)\n</pre></div>'si", $output, $matches);
         $arrContent = preg_split('/\n/', $matches[1]);

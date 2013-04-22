@@ -1,3 +1,12 @@
 .navbar {
-    margin-top: 1em;
-}
+  margin-top: 1em; }
+
+pre {
+  word-break: keep-all;
+  padding: 10px; }
+
+.number {
+  text-align: right; }
+
+.ln {
+  height: 20px; }

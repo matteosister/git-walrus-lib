@@ -19,6 +19,9 @@ services:
 
   git_content:
     class: GitWalrus\Git\Content
+    arguments:
+      - @repo
+      - @pygmentize
 
   twig_extension:
     class: GitWalrus\Twig\GitWalrusExtension
@@ -26,4 +29,12 @@ services:
       - @service_container
     tags:
       - { name: twig.extension }
+
+  pygmentize_binary:
+    class: Cypress\PygmentsElephantBundle\PygmentsElephant\PygmentizeBinary
+
+  pygmentize:
+    class: Cypress\PygmentsElephantBundle\PygmentsElephant\Pygmentize
+    arguments:
+      - @pygmentize_binary
 

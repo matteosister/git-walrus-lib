@@ -9,6 +9,7 @@
 
 namespace GitWalrus;
 
+use Cypress\PygmentsElephantBundle\CypressPygmentsElephantBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -36,7 +37,8 @@ class GitWalrusKernel extends Kernel
     {
         return array(
             new FrameworkBundle(),
-            new TwigBundle()
+            new TwigBundle(),
+            new CypressPygmentsElephantBundle()
         );
     }
 
